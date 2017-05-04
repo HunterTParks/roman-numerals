@@ -3,6 +3,7 @@ var array = [];
 var m_convert = function(input){
   if(input.toString()[0] === "1"){
     input = input.replace('1', 'M');
+
     array.push(input.substring(0 , 1));
     // console.log(input.substring(1));
     return input.substring(1);
@@ -85,11 +86,16 @@ var d_convert = function(input){
     console.log(array);
     return input.substring(1);
   }
+  else if(input.toString()[0] === "0"){
+    input = input.replace('0', '');
+    return input.substring(1)
+  }
 
 };
 var l_convert = function(input){
   if(input.toString()[0] === "9"){
     input = input.replace('9', 'XC');
+    input = input.replace('0', '');
     array.push(input.substring(0 , 2));
     console.log(input.substring(2));
     console.log(array);
@@ -97,6 +103,7 @@ var l_convert = function(input){
   }
   else if(input.toString()[0] === "8"){
     input = input.replace('8', 'LXXX');
+    input = input.replace('0', '');
     array.push(input.substring(0 , 4));
     console.log(input.substring(4));
     console.log(array);
@@ -104,6 +111,7 @@ var l_convert = function(input){
   }
   else if(input.toString()[0] === "7"){
     input = input.replace('7', 'LXX');
+    input = input.replace('0', '');
     array.push(input.substring(0 , 3));
     console.log(input.substring(3));
     console.log(array);
@@ -111,6 +119,7 @@ var l_convert = function(input){
   }
   else if(input.toString()[0] === "6"){
     input = input.replace('6', 'LX');
+    input = input.replace('0', '');
     array.push(input.substring(0 , 2));
     console.log(input.substring(2));
     console.log(array);
@@ -118,6 +127,7 @@ var l_convert = function(input){
   }
   else if(input.toString()[0] === "5"){
     input = input.replace('5', 'L');
+    input = input.replace('0', '');
     array.push(input.substring(0));
     console.log(input.substring(1));
     console.log(array);
@@ -125,6 +135,7 @@ var l_convert = function(input){
   }
   else if(input.toString()[0] === "4"){
     input = input.replace('4', 'XL');
+    input = input.replace('0', '');
     array.push(input.substring(0 , 2));
     console.log(input.substring(2));
     console.log(array);
@@ -132,6 +143,7 @@ var l_convert = function(input){
   }
   else if(input.toString()[0] === "3"){
     input = input.replace('3', 'XXX');
+    input = input.replace('0', '');
     array.push(input.substring(0 , 3));
     console.log(input.substring(3));
     console.log(array);
@@ -139,6 +151,7 @@ var l_convert = function(input){
   }
   else if(input.toString()[0] === "2"){
     input = input.replace('2', 'XX');
+    input = input.replace('0', '');
     array.push(input.substring(0 , 2));
     console.log(input.substring(2));
     console.log(array);
@@ -146,9 +159,13 @@ var l_convert = function(input){
   }
   else if(input.toString()[0] === "1"){
     input = input.replace('1', 'X');
-    array.push(input.substring(0));
+    input = input.replace('0', '');
+    array.push(input.substring(0, 1));
     console.log(input.substring(1));
     console.log(array);
+    return input.substring(1);
+  }
+  else if(input.toString()[0] === "0"){
     return input.substring(1);
   }
 };
@@ -156,6 +173,7 @@ var l_convert = function(input){
 var x_convert = function(input){
   if(input.toString()[0] === "9"){
     input = input.replace('9', 'IX');
+
     array.push(input.substring(0 , 2));
     console.log(input.substring(2));
     console.log(array);
@@ -163,6 +181,7 @@ var x_convert = function(input){
   }
   else if(input.toString()[0] === "8"){
     input = input.replace('8', 'VIII');
+
     array.push(input.substring(0 , 4));
     console.log(input.substring(4));
     console.log(array);
@@ -170,6 +189,7 @@ var x_convert = function(input){
   }
   else if(input.toString()[0] === "7"){
     input = input.replace('7', 'VII');
+
     array.push(input.substring(0 , 3));
     console.log(input.substring(3));
     console.log(array);
@@ -177,6 +197,7 @@ var x_convert = function(input){
   }
   else if(input.toString()[0] === "6"){
     input = input.replace('6', 'VI');
+
     array.push(input.substring(0 , 2));
     console.log(input.substring(2));
     console.log(array);
@@ -184,6 +205,7 @@ var x_convert = function(input){
   }
   else if(input.toString()[0] === "5"){
     input = input.replace('5', 'V');
+
     array.push(input.substring(0));
     console.log(input.substring(1));
     console.log(array);
@@ -191,6 +213,7 @@ var x_convert = function(input){
   }
   else if(input.toString()[0] === "4"){
     input = input.replace('4', 'IV');
+
     array.push(input.substring(0 , 2));
     console.log(input.substring(2));
     console.log(array);
@@ -198,6 +221,7 @@ var x_convert = function(input){
   }
   else if(input.toString()[0] === "3"){
     input = input.replace('3', 'III');
+
     array.push(input.substring(0 , 3));
     console.log(input.substring(3));
     console.log(array);
@@ -205,6 +229,7 @@ var x_convert = function(input){
   }
   else if(input.toString()[0] === "2"){
     input = input.replace('2', 'II');
+
     array.push(input.substring(0 , 2));
     console.log(input.substring(2));
     console.log(array);
@@ -212,9 +237,14 @@ var x_convert = function(input){
   }
   else if(input.toString()[0] === "1"){
     input = input.replace('1', 'I');
+
     array.push(input.substring(0));
     console.log(input.substring(1));
     console.log(array);
+    return input.substring(1);
+  }
+  else if(input.toString()[1] === "0"){
+    input = input.replace('0', '');
     return input.substring(1);
   }
 };

@@ -249,10 +249,6 @@ var x_convert = function(input){
   }
 };
 
-var filter = function(input){
-
-};
-
 $(document).ready(function(){
   $("form#mainform").submit(function(event){
     event.preventDefault();
@@ -282,7 +278,5 @@ $(document).ready(function(){
       total = array.join("");
       console.log(total);
     }
-
-
   });
 });
